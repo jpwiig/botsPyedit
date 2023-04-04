@@ -1,5 +1,13 @@
-#creation of a discord bot to learn more python
+import bot
 
-def main ():
-    print("test")
-    
+#starts the bot, see the different files for features
+
+#created by JP 
+
+#github: jpwiig
+
+#learning some python as a second code language
+
+
+if __name__ == '__main__': 
+        bot.start_bot()
