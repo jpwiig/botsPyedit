@@ -1,5 +1,5 @@
 def respones(mssge : str) -> str: 
-    message = mssge
+    message = mssge.lower()
 
     if message == 'mus':
         return 'ehus'
@@ -10,5 +10,7 @@ def respones(mssge : str) -> str:
         return 'https://media1.tenor.com/images/c5d7235861884672feac3bc93f20d5da/tenor.gif?itemid=26839897'    
     if message =='!hva':
         return 'hjelpemelding din nørd'
-    
-    return 'hei du jeg syns du er en tulling'
+    if message == 'faen' or 'fuck deg':
+        return 'ikke bann!'
+
+    return 'tulling'
