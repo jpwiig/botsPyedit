@@ -13,7 +13,7 @@ logger = logging.getLogger('Discord')
 
 async def send_message(message, user_message, is_private):
     try:
-        ans = response.respones(user_message)
+        ans = response.newresponse(user_message)
         await message.author.send(ans) if is_private else await message.channel.send(ans)
     except Exception as e:
         print(f'error inside Exception {e}')

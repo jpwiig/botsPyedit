@@ -1,16 +1,29 @@
-def respones(mssge: str) -> str:
-    message = mssge.lower()
 
-    if message == 'mus':
-        return 'ehus'
-    elif message == 'rick':
-        return 'never gonna give you up, never gonna let you down'
-    elif message == 'https://tenor.com/view/ruben-vareide-ruben-vareide-prebz-og-dennis-prebz-gif-26529878':
-        return 'https://media1.tenor.com/images/c5d7235861884672feac3bc93f20d5da/tenor.gif?itemid=26839897'
-    elif message == '!hva':
-        return 'hjelpemelding din nørd'
-    if message == 'faen' or message == 'fuck deg':
-        return 'ikke bann!'
-    else:
-        return None
-# return 'tulling'
+def newresponse(mssge: str) -> str:
+    message = mssge.lower();
+    # if  message contains a word in the list, return the corresponding warning
+    contains = {
+
+        'faen': 'ikke bann!',
+        'fuck deg': 'ikke bann',
+
+    }
+
+    for contains, warning in contains.items():
+        if contains in message:
+            return warning
+
+    only = {
+
+        'https://tenor.com/view/ruben-vareide-ruben-vareide-prebz-og-dennis-prebz-gif-26529878': 'https://tenor.com/view/hammer-nope-hit-gif-25244680',
+        'mus': 'ehus',
+        '!hva': 'tulling XD',
+        'grr': 'kanskje du bør roe deg ned litt',
+        'rick': 'never gonna give you up, never gonna let you down',
+    }
+
+
+    for a, warning in only.items():
+        if a == message:
+            return warning
+    return None
